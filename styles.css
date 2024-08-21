@@ -1,0 +1,157 @@
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #eba328, #dc661f);
+}
+
+/* Overlay for Play Button */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    /* Semi-transparent black */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#play-button {
+    font-size: 2em;
+    padding: 20px 40px;
+    background-color: #eba328;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#play-button:hover {
+    background-color: #dc661f;
+}
+
+.animated-text {
+    font-size: 3.5em;
+    animation: waveAnimation 3s ease-in-out infinite;
+    color: #fff;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+/* Wave Animation */
+@keyframes waveAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-10px);
+        /* Move text up */
+    }
+
+    50% {
+        transform: translateY(0px);
+        /* Return to original position */
+    }
+
+    75% {
+        transform: translateY(10px);
+        /* Move text down */
+    }
+
+    100% {
+        transform: translateY(0px);
+        /* Return to original position */
+    }
+}
+
+.photo-gallery img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    font-size: 1.75em;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.birthday-message {
+    font-size: 1.75em;
+    margin: 20px 0;
+    color: #fff;
+    animation: fadeIn 4s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#present-box {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#present-box img {
+    width: 600px;
+    /* Size of the present box */
+    transition: transform 0.3s ease;
+}
+
+#present-box img:hover {
+    transform: scale(1.1);
+}
+
+/* Confetti and Balloons */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('confetti.gif') repeat, url('balloons.gif') repeat;
+    background-size: contain, cover;
+    z-index: -1;
+}
+
+/* Modal Customization */
+.modal-content {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.modal-body img {
+    max-width: 400px;
+    /* Size of the open present box */
+}
+
+.btn-primary {
+    background-color: #eba328;
+    border-color: #dc661f;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    border-color: #dc661f;
+    color: #eba328;
+}
